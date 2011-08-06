@@ -1,0 +1,52 @@
+!!! 5
+%html
+  %head
+  %title sandiego.js: the San Diego Javascript group
+  %link{:href => '/styles.css', :rel => 'stylesheet'}
+  %script{:type => "text/javascript", :src => "http://use.typekit.com/bdb1ioh.js"}
+  %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+  %script{:type => "text/javascript", :src => "/javascripts/jquery.lettering-0.6.1.min.js"}
+  :javascript
+    try{Typekit.load();}catch(e){}
+    $(document).ready(function() {
+      $("h1").lettering();
+    });
+  
+%body
+  #page
+    %h1 sandiegojs
+    %h2 Welcome to sandiego.js, the San Diego Javascript group.
+
+    .panel
+      %h2 Meetings
+      %p We meet the 1st Tuesday of each month.
+      %p
+        %a{:href => "http://3rdspace.co"}3rd Space
+        %br
+        4610 Park Blvd
+        %br
+        San Diego, CA 92116
+        %br
+        619-255-3609
+      
+    .panel
+      %h2 Topics
+      %p Javascript. Everything Javascript.
+      %p jQuery. Prototype. Node. Raphael. Backbone. PJAX. Modernizer. Coffee Script. Mustache.
+      %p And more.
+    
+    .panel
+      %h2 How to Participate
+      %ul
+        %li= 'Sign up on our <a href="http://www.meetup.com/sandiegojs/">Meetup group page</a>.'
+        %li= 'Join our <a href="http://groups.google.com/group/sandiegojs">Google Group mailing list</a>.'
+        %li= 'Follow us on Twitter at <a href="http://twitter.com/sandiegojs">@sandiegojs</a>.'
+        %li= '<a href="maito:sandiegojs@gmail.com">Email us</a> if you wanna give a talk.'
+    
+    %br{:style => "clear: both"}
+    
+    %p#organizers
+      sandiego.js is organized by
+      %a{:href => "http://yahoo.com"}Kevin Ball
+      and
+      %a{:href => "http://mokolabs.com"}Patrick Crowley
