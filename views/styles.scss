@@ -70,10 +70,14 @@ body {
 }
 
 h1 {
-  margin: 200px 0 60px 0;
+  -webkit-transition: all .2s linear;
+  cursor: pointer;
+  height: 180px;
+  margin: 200px 0 10px 0;
   font-size: 144px;
   font-family: myriad-pro;
   font-weight: bold;
+  transition: all .2s linear;
   span {
     color: #E6E6E6;
     margin: 0 -6px 0 0;
@@ -98,6 +102,9 @@ h1 {
   }
   span.char8 {
     margin-right: 3px;
+  }
+  &:hover {
+    font-size: 148px;
   }
 }
 
@@ -128,12 +135,16 @@ p {
 
 a {
   color: #bbb;
+  -webkit-transition: color .2s linear;
+  transition: color .2s linear;
   &:hover {
+    color: #007FFE;
     text-decoration: none;
   }
 }
 
 .panel {
+  -webkit-transition: all .2s linear;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -142,8 +153,13 @@ a {
   height: 160px;
   margin: 40px 10px 20px 10px;
   padding: 0 10px;
-  width: 280px;
   text-align: left;
+  transition: all .2s linear;
+  width: 280px;
+  &:hover {
+    background: #222;
+    border: 1px solid #aaa;
+  }
 }
 
 .panel + .panel + .panel {

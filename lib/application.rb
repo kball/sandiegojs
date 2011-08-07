@@ -5,7 +5,7 @@ require 'sass'
 class Application < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :public, File.join(root, 'public')
-  set :haml, :format => :html5
+  set :haml, :format => :html5, :attr_wrapper => '"'
 
   get '/' do
     haml :index
