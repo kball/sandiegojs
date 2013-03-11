@@ -7,11 +7,15 @@ class Application < Sinatra::Base
   set :public, File.join(root, 'public')
   set :haml, :format => :html5, :attr_wrapper => '"'
 
-  get '/' do
-    haml :index
+  get '*' do
+    redirect "http://sandiegojs.org" +  params[:splat].join("/")
   end
-
-  get '/styles.css' do
-    scss :styles
-  end
+  
+  # get '/' do
+  #   haml :index
+  # end
+  # 
+  # get '/styles.css' do
+  #   scss :styles
+  # end
 end
